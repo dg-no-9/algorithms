@@ -12,7 +12,10 @@ def multiply(x,y):
         c = y / pow(10, n/2)
         d = y % pow(10, n/2)
         print a,b,c,d
-        return multiply(a,c) * pow(10,n) + (multiply(a,d) + multiply(b,c))*pow(10,n/2) + multiply(b,d)
+        e = multiply(a,c)
+        f = multiply(b,d)
+        g = multiply(a+b, c+d)
+        return e * pow(10,n) + (g-e-f)*pow(10,n/2) + f
 
 a = 23422
 b = 2346
